@@ -1,5 +1,5 @@
 # Broadway_Success
-What is the most successful Broadway Musical
+What is the most successful Broadway musical
 from 1985 to 2020. And what is success? This project aims to define what it means to be successful in Broadway and to explore through various analyses the overall success ranking of all Broadway musicals from 1985 to 2020. 
 
 [Here is a Google Slides presentation of our findings.](https://docs.google.com/presentation/d/1B6h-g7VRw5GV1WouYbU8tnUj-X9UDIJXlu-UwHAYf_0/edit#slide=id.p)
