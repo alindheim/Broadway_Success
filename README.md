@@ -5,7 +5,7 @@ from 1985 to 2020. And what is success? This project aims to define what it mean
 [Here is a Google Slides presentation of our findings.](https://docs.google.com/presentation/d/1B6h-g7VRw5GV1WouYbU8tnUj-X9UDIJXlu-UwHAYf_0/edit#slide=id.p)
 
 # Data Dictionary
-Below are the variables of the [Broadway dataset](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-04-28/grosses) (originally `grosses.csv`) from [Alex Cookson](https://github.com/tacookson/data/tree/master/broadway-grosses), derived from [Playbill](https://www.playbill.com/grosses).
+Below are the variables of the `broadway` dataset (originally `grosses.csv`) from [Alex Cookson](https://github.com/tacookson/data/tree/master/broadway-grosses), derived from [Playbill](https://www.playbill.com/grosses).
 ### `broadway.RDS`
 
 | variable             | class     | description                                                  |
