@@ -1,0 +1,75 @@
+---
+title: "Project Proposal"
+subtitle: ""
+author: "Melanie Neller, David Khella, Alex dePillis-Lindheim, Daniel Rea"
+date: "Wednesday, October 12, 11:59pm"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: false
+    highlight: tango
+link-citations: yes
+---
+
+```{r, warninigs = FALSE, message = FALSE}
+library(tidyverse)
+library("stringr")
+```
+
+
+```{r, warning = FALSE, message = FALSE}
+
+# reading in data 
+
+chocolate <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv')
+
+broadway <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-04-28/grosses.csv', guess_max = 40000)
+
+colony <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv')
+
+stressor <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/stressor.csv')
+
+```
+
+
+
+# Proposal 1
+
+Source of the data: It is from Tidyverse Tuesday who got the data from Playbill. Each observation represents a musical that was performed and includes information like where it was performed, in what year, and even in what theatre, etc..
+
+Research Question: What have been the most successful Broadway musicals from 1985 to 2020? We should first decide how to define success, or explore different definitions of success (i.e. seats sold, money generated, or how long it ran for).
+
+Hypothesis: The plays that are most successful given any one of the above definitions of success will also be most successful following the other definitions.
+
+```{r, warning = FALSE, message = FALSE}
+glimpse(broadway)
+```
+
+
+# Proposal 2
+
+Source of the data: The data comes from the USDA, hat tip to Georgios Karamanis. https://usda.library.cornell.edu/concern/publications/rn301137d?locale=en. 
+
+Research question: What is the relationship between stressors and the decline of bees colonies? Each observation in this data represents bee colonies in different states at different times of the year.
+
+Hypothesis: Colonies with more stressors will tend to experience more decline than other colonies.
+
+```{r, message=FALSE, warning=FALSE}
+bees <- colony %>%
+  left_join(stressor)
+
+glimpse(bees)
+```
+
+# Proposal 3
+
+The source of the data is Flavors of Cocao; it's a website with information about different kinds of chocolate. 
+
+Research question: What is the correlation between the percentage of cocoa and the most memorable characteristics of the chocolate? Each observation represents a different chocolate from different sources and companies.
+
+Hypothesis: Chocolates with a higher percent cocoa are more likely to be described as being rich.
+
+```{r, messages= FALSE, warning = FALSE, show_col_types = FALSE}
+glimpse(chocolate)
+```
+
